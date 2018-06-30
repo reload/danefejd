@@ -1,0 +1,29 @@
+{
+  "name": "ruleEngine",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index",
+  "types": "lib/index",
+  "scripts": {
+    "test": "nodemon -e ts --exec mocha -r ts-node/register tests/**/*.spec.ts",
+    "posttest": "npm run build",
+    "start": "npm run build:live",
+    "build:live": "nodemon --exec ./node_modules/.bin/tsc -- ./src/**/*.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/chai": "^4.1.4",
+    "@types/mocha": "^5.2.4",
+    "@types/node": "^10.5.1",
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.17.5",
+    "ts-node": "^7.0.0",
+    "typescript": "^2.9.2"
+  },
+  "dependencies": {
+    "lodash-ts": "^1.2.5"
+  }
+}
